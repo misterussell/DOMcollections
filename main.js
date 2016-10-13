@@ -5,12 +5,31 @@
 //PROOF position + splitting
 // var distance = markets[1].marketname.split(' ');
 
-function pullMarkets(market, i, arr) {
-  var distance = market.marketname.split(' ');
-  return distance[0] < 10;
+function getDistance(market) {
+  return market.marketname.split(' ');
 }
 
-function
+function pullMarkets(market, i, arr) {
+  var distance = getDistance(market);
+  return distance[0] < 10;
+}
+//console.log(markets.filter(pullMarkets));
 
-// console.log(distance[0]);
-console.log(markets.filter(pullMarkets));
+function createSentence() {
+  // return arguments.length
+}
+
+function nameMarkets(market, i, arr) {
+  var partOfName = getDistance(market);
+  var createName = partOfName.slice(1).join(' ');
+  return createName;
+}
+
+function addToList(market, i, arr) {
+  console.log('hi');
+  var $addLi = $('<li>' + market + '</li>');
+  $('ul').append($addLi);
+
+}
+
+var marketsNearYou = markets.filter(pullMarkets).map(nameMarkets).forEach(addToList);
