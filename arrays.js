@@ -61,7 +61,7 @@ var markets = [{
 
 
 // for cat gifs
-var results = {
+var catGifs = {
     data: [{
         type: "gif",
         id: "64zSh1uTE7xxm",
