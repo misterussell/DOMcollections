@@ -20,10 +20,6 @@ function pullMarkets(market, i, arr) {
 }
 //console.log(markets.filter(pullMarkets));
 
-function createSentence() {
-  // return arguments.length
-}
-
 function nameMarkets(market, i, arr) {
   var partOfName = getDistance(market);
   var createName = partOfName.slice(1).join(' ');
@@ -31,7 +27,7 @@ function nameMarkets(market, i, arr) {
 }
 
 function addToList(market, i, arr) {
-  console.log('hi');
+  // console.log('hi');
   var $addLi = $('<li>' + market + '</li>');
   $(marketList).append($addLi);
 }
@@ -39,7 +35,7 @@ function addToList(market, i, arr) {
 var marketsNearYou = markets.filter(pullMarkets).map(nameMarkets).forEach(addToList);
 
 //FOR CAT GIFS
-catCache = catGifs.data;
+var catCache = catGifs.data;
 
 //PROOF to get image link
 // console.log(catCache[2].images.original.url);
@@ -48,8 +44,13 @@ function getLink(cat, i, arr) {
   return catCache[i].images.original.url;
 }
 
-// function addPictureToList(link, i, arr) {
-//
-// }
+function addPictureToList(link, i, arr) {
+  console.log('hi');
+  var $addLi = $('<li><img src="' + link + '" /></li>');
+  $(catList).append($addLi);
+}
 
-console.log(catCache.map(getLink));
+// PROOF gettings links
+// console.log(catCache.map(getLink));
+
+var catsNearYou = catCache.map(getLink).forEach(addPictureToList);

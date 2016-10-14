@@ -1,0 +1,28 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catGifs {
+  background: pink;
+}
+
+.catGifs ul {
+  content: "";
+  clear: both;
+  display: block;
+}
+/*.catGifs li {
+    display: block;
+    float: left;
+    text-align: center;
+}*/
